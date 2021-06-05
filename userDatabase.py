@@ -2,21 +2,23 @@ from user import User
 from sortedcontainers import SortedList
 from sortedcollections import ValueSortedDict
 import yaml
+import os.path
+from os import path
 
 letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 class UserDatabase:
-    def __init__(self, currentUserId = 0, userList: list = None):
+    def __init__(self, file = None):
         self.usersById = dict()
         self.usersByFL = dict()
 
         for letter in letters:
             self.usersByFL[letter] = SortedList(key = lambda user: user.fullName)
 
-        self.currentUserId = currentUserId
-        if userList is not None:
-            for user in userList:
-                self.__addUser(user)
+        if file is not None:
+            self.file = file
+
+        self.currentUserId = 0
 
     def getUserFromId(self, userId: int) -> User:
         return self.usersById.get(userId)
@@ -49,7 +51,9 @@ class UserDatabase:
 
         self.usersById.pop(userId)
         self.usersByFL[user.firstLetter].remove(user)
+
         return True
+
 
     def searchUsers(self, name = None, studyYear = None, studyField = None, interests = None):
         matches = []
@@ -93,4 +97,34 @@ class UserDatabase:
     def updateUserDictPositionForNameChange(self, user: User, newName: str):
         self.usersByFL[user.firstLetter].remove(user)
         self.usersByFL[newName[0]].add(user)
+        
+
+    def toFileString(self):
+        result = ""
+        result += str(self.currentUserId) + "\n"
+        for user in self.usersById.values():
+            result += user.toFileString()
+            result += "\n"
+
+        return result
+        
+    def loadFile(self):
+        if not path.isfile(self.file):
+            self.writeFile()
+        else:
+            with open(self.file, "r") as f:
+                lines = f.readlines()
+            
+            currentId = int(lines.pop(0))
+
+            while len(lines) >=9:
+                userLines = lines[0:9]
+                self.__addUser(User.fileStringListToUser(userLines))
+                lines = lines[10:]
+
+    def writeFile(self):
+        with open(self.file, "w") as f:
+            f.write(self.toFileString())
+        
+
         

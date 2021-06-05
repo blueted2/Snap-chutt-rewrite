@@ -8,19 +8,22 @@ class User:
     studyYear: int = 2021, 
     studyField: str = "Testing", 
     residence: str = "My Computer", 
-    interests: set = set([1, 3, 6])):
+    interests: set = set([1, 3, 6]),
+    id = -1,
+    following = set(),
+    followers = set()):
         self.__fullName = fullName.title()
         self.age = int(age)
         self.studyYear = int(studyYear)
         self.studyField = studyField
         self.residence = residence
         self.interests = set(interests)
-        self.id = -1
-
-        self.following = set()
-        self.followers = set()
+        self.id = id
+        self.following = following
+        self.followers = followers
 
         self.database = None
+
 
     # Quickly get the first letter of the user's name
     @property
@@ -59,3 +62,32 @@ class User:
 
     def __repr__(self):
         return f"(id={self.id}, fullName={self.fullName}))"
+
+    def toFileString(self):
+        result = ""
+        result += str(self.id) + "\n"
+        result += str(self.fullName) + "\n"
+        result += str(self.age) + "\n"
+        result += str(self.studyYear) + "\n"
+        result += str(self.studyField) + "\n"
+        result += str(self.residence) + "\n"
+        result += str(list(self.interests)) + "\n"
+        result += str(list(self.following)) + "\n"
+        result += str(list(self.followers)) + "\n"
+
+        return result
+
+    def fileStringListToUser(lines: list):
+        id         =  int(lines[0])
+        fullName   =      lines[1]
+        age        =  int(lines[2])
+        studyYear  =  int(lines[3])
+        studyField =      lines[4]
+        residence  =      lines[5]
+        
+        interests  = set( [int(i) for i in lines[6][1:-1].split(",") if i!=""] )
+        following  = set( [int(i) for i in lines[7][1:-1].split(",") if i!=""] )
+        followers  = set( [int(i) for i in lines[8][1:-1].split(",") if i!=""] )
+
+        return User(fullName, age, studyYear, studyField, residence, interests, id, following, followers)
+        

@@ -1,14 +1,45 @@
 from menus import main_menu
 from userDatabase import UserDatabase
 from user import User
-import interface
 
-u1 = User()
-u2 = User(fullName= "Rick Asley")
+database = UserDatabase(file = "database.txt")
 
-database = UserDatabase()
+# u1 = User()
+# u2 = User(fullName= "Rick Asley")
 
-database.addNewUser(u1)
-database.addNewUser(u2)
+# database = UserDatabase()
 
-main_menu(database)
+# database.addNewUser(u1)
+# database.addNewUser(u2)
+
+# main_menu(database)
+# print(u1.toFileString())
+
+s = """2
+0
+Test User
+18
+2021
+Testing
+My Computer
+[1, 3, 6]
+[]
+[]
+
+1
+Rick Asley
+18
+2021
+Testing
+My Computer
+[1, 3, 6]
+[]
+[]"""
+
+d = UserDatabase("database.txt")
+d.loadFile()
+
+main_menu(d)
+
+# u3 = User.fileStringListToUser(s.split("\n"))
+

@@ -24,6 +24,7 @@ def main_menu(database):
             search_menu(database)
         elif choice == 3:
             new_user_menu(database)
+            database.writeFile()
         elif choice == 4:
             view_all_users_menu(database)
         elif choice == 5:
@@ -42,6 +43,7 @@ def login_menu(database: UserDatabase):
 
 def loggedIn_menu(database: UserDatabase, user: User):
     while True:
+        user.database.writeFile()
         clearAndLogo()
         print("Hello {} (user id: {})".format(user.fullName, user.id))
         print()
@@ -62,14 +64,18 @@ def loggedIn_menu(database: UserDatabase, user: User):
             user_information_menu(user)
         elif choice == 2:
             update_user_menu(user)
+            database.writeFile()
         elif choice == 3:
             follow_menu(user)
+            database.writeFile()
         elif choice == 4:
             unfollow_menu(user)
+            database.writeFile()
         elif choice == 5:
             display_followers_menu(user)
         elif choice == 6:
             delete_account_menu(user)
+            database.writeFile()
             return
         elif choice == 7:
             return
