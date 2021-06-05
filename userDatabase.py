@@ -81,7 +81,7 @@ class UserDatabase:
   
         for id, user in self.usersById.items():
             if currentUser == user: continue # Don't want to add self
-            if user in currentUser.following: continue
+            if user in currentUser.getFollowing(): continue
 
             recommendations[user] = UserDatabase.getRecommendationScore(currentUser, user)
 

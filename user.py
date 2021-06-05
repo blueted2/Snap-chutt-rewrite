@@ -28,22 +28,28 @@ class User:
         return self.fullName[0]
 
     def follow(self, followingUser):
-        if followingUser in self.following: return False
+        if followingUser.id in self.following: return False
         if self == followingUser: return False
         
-        self.following.add(followingUser)
-        followingUser.followers.add(self)
+        self.following.add(followingUser.id)
+        followingUser.followers.add(self.id)
         return True
 
     def unfollow(self, unfollowingUser):
-        if unfollowingUser not in self.following: return False
+        if unfollowingUser.id not in self.following: return False
         
-        self.following.remove(unfollowingUser)
-        unfollowingUser.followers.remove(self)
+        self.following.remove(unfollowingUser.id)
+        unfollowingUser.followers.remove(self.id)
         return True
 
     @property
     def fullName(self): return self.__fullName
+
+    def getFollowing(self):
+        return [self.database.getUserFromId(id) for id in self.following]
+
+    def getFollowers(self):
+        return [self.database.getUserFromId(id) for id in self.followers]
     
     # We need to use a setter for the fullname, because if the first letter changes, we need to update the user's position within the database dictionary
     @fullName.setter

@@ -127,7 +127,7 @@ def follow_menu(user: User):
         clearAndLogo()
         print("----FOLLOW MENU----")
         print("You are currently following: ")
-        print("    ", userListToIdsAndNamesStr(user.following, seperator= "\n   "))
+        print("    ", userListToIdsAndNamesStr(user.getFollowing(), seperator= "\n   "))
 
         recomendations = user.database.getRecomendations(user)
         print("Users with lots in common: ")
@@ -156,7 +156,7 @@ def unfollow_menu(user: User):
         clearAndLogo()
         print("----UNFOLLOW MENU----")
         print("You are currently following: ")
-        print("    ", userListToIdsAndNamesStr(user.following, seperator= "\n   "))
+        print("    ", userListToIdsAndNamesStr(user.getFollowing(), seperator= "\n   "))
 
         choiceString = input("Enter a user's id to unfollow(empty to exit): ")
         if not choiceString.isnumeric(): return
@@ -177,8 +177,8 @@ def unfollow_menu(user: User):
 def display_followers_menu(user: User):
     clearAndLogo()
     print("----FOLLOWERS----")
-    print(f"You are currently being followed by {len(user.followers)} people")
-    print("    ", userListToIdsAndNamesStr(user.followers, seperator="\n    "))
+    print(f"You are currently being followed by {len(user.getFollowers())} people")
+    print("    ", userListToIdsAndNamesStr(user.getFollowers(), seperator="\n    "))
     input("Press enter to continue")
 
 def delete_account_menu(user: User):
