@@ -1,30 +1,39 @@
 from user import User
 from sortedcontainers import SortedList
 from sortedcollections import ValueSortedDict
+import yaml
 
 letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 class UserDatabase:
-    def __init__(self):
+    def __init__(self, currentUserId = 0, userList: list = None):
         self.usersById = dict()
         self.usersByFL = dict()
 
         for letter in letters:
             self.usersByFL[letter] = SortedList(key = lambda user: user.fullName)
 
-        self.currentUserId = 0
+        self.currentUserId = currentUserId
+        if userList is not None:
+            for user in userList:
+                self.__addUser(user)
 
     def getUserFromId(self, userId: int) -> User:
         return self.usersById.get(userId)
 
-    def addUser(self, user: User):
+    # Private function for directly adding the user, without giving it a new id.
+    def __addUser(self, user: User):
+        user.database = self
+        self.usersById[user.id] = user
+        self.usersByFL[user.firstLetter].add(user)
+
+    # Takes a newly created user, asigns it an id and adds it to both dictionaries
+    def addNewUser(self, user: User):
         newId = self.currentUserId
         self.currentUserId += 1
-
         user.id = newId
-        user.database = self
-        self.usersById[newId] = user
-        self.usersByFL[user.firstLetter].add(user)
+        self.__addUser(user)
+        
         
     
     def removeUser(self, user: User) -> bool:
