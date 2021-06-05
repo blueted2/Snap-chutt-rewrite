@@ -17,7 +17,7 @@ def main_menu(database):
             "5 - Exit "
             )
 
-        choice = inputIntInRange(1, 5)
+        choice = inputIntInRange(1, 6)
         if choice == 1:
             login_menu(database)
         elif choice == 2:

@@ -20,6 +20,8 @@ class UserDatabase:
 
         self.currentUserId = 0
 
+        self.loadFile()
+
     def getUserFromId(self, userId: int) -> User:
         return self.usersById.get(userId)
 
