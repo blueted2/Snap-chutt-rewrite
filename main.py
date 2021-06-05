@@ -8,7 +8,7 @@ u2 = User(fullName= "Rick Asley")
 
 database = UserDatabase()
 
-database.addUser(u1)
-database.addUser(u2)
+database.addNewUser(u1)
+database.addNewUser(u2)
 
 main_menu(database)

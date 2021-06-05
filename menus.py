@@ -272,7 +272,7 @@ def new_user_menu(database: UserDatabase):
             interestsSet.add(int(i))
     
     newUser = User(fullName, age, studyYear, studyField, residence, interestsSet)
-    database.addUser(newUser)
+    database.addNewUser(newUser)
     print(f"Account created! Welcome to Snap-chutt, {newUser.fullName}")
     print(f"Your id number is: {newUser.id}")
     input()
