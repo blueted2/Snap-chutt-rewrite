@@ -1,15 +1,3 @@
-
-
-
-IN_SPORT      = 0
-IN_CINEMA     = 1
-IN_ART        = 2
-IN_HEALTH     = 3
-IN_TECHNOLOGY = 4
-IN_DIY        = 5
-IN_COOKING    = 6
-IN_TRAVEL     = 7
-
 ALL_INTERESTS = ["sport", "cinema", "art", "health", "technology", "diy", "cooking", "travel"]
 
 
