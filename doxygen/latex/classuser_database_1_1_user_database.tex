@@ -1,0 +1,237 @@
+\hypertarget{classuser_database_1_1_user_database}{}\doxysection{user\+Database.\+User\+Database Class Reference}
+\label{classuser_database_1_1_user_database}\index{userDatabase.UserDatabase@{userDatabase.UserDatabase}}
+
+
+This class holds a collection of \mbox{\hyperlink{classuser_1_1_user}{user.\+User}}, and has methods for manipulating these objects.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classuser_database_1_1_user_database_a263dbb68e052b017fb5a007994b63a01}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classuser_database_1_1_user_database_a7e1faa00bf22396963dc8f873d8feccc}{file}}=None)
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classuser_database_1_1_user_database}{User\+Database}} initializer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuser_1_1_user}{User}} \mbox{\hyperlink{classuser_database_1_1_user_database_a58841ec49111f62918a89211751f93b9}{get\+User\+From\+Id}} (self, int user\+Id)
+\begin{DoxyCompactList}\small\item\em Get a \mbox{\hyperlink{classuser_1_1_user}{user.\+User}} reference from a user id. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classuser_database_1_1_user_database_af0c36af712141741fbba2cb1c7d39763}{add\+New\+User}} (self, \mbox{\hyperlink{classuser_1_1_user}{User}} user)
+\begin{DoxyCompactList}\small\item\em Takes a newly created user, asigns it an id, sets it\textquotesingle{}s database reference to this \mbox{\hyperlink{classuser_database_1_1_user_database}{User\+Database}}, and adds it to the required collections. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classuser_database_1_1_user_database_ab8eaaf537c9950d9ace3e4c879deffa7}{remove\+User}} (self, \mbox{\hyperlink{classuser_1_1_user}{User}} user)
+\begin{DoxyCompactList}\small\item\em Remove a user from the database. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classuser_database_1_1_user_database_a3883886f0b5bffabd248abee000d1546}{search\+Users}} (self, name=None, study\+Year=None, study\+Field=None, interests=None)
+\begin{DoxyCompactList}\small\item\em Search all the users, using the supplied search parameters, all of which are optionnal. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classuser_database_1_1_user_database_a82d4d9d651c56ec54ab73600112d6ba5}{get\+Recomendations}} (self, current\+User, n=5)
+\begin{DoxyCompactList}\small\item\em Get friends/people with common interests for a given user. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classuser_database_1_1_user_database_a844a75614c21d4e6d0088f09470df04d}{remove\+User\+Before\+Name\+Change}} (self, \mbox{\hyperlink{classuser_1_1_user}{User}} user)
+\begin{DoxyCompactList}\small\item\em Used for when a user wants to change their name. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classuser_database_1_1_user_database_a2e3cc55aaf50c81826eecccec625ec6c}{add\+User\+After\+Name\+Change}} (self, \mbox{\hyperlink{classuser_1_1_user}{User}} user)
+\begin{DoxyCompactList}\small\item\em To be used after \mbox{\hyperlink{classuser_database_1_1_user_database_a844a75614c21d4e6d0088f09470df04d}{remove\+User\+Before\+Name\+Change()}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classuser_database_1_1_user_database_a37afafe83cb134cb6b712f21574fd23b}{to\+File\+String}} (self)
+\begin{DoxyCompactList}\small\item\em Convert the database into a string which can be written to a file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classuser_database_1_1_user_database_a1d03dda99beba18da998f4641d83793d}\label{classuser_database_1_1_user_database_a1d03dda99beba18da998f4641d83793d}} 
+def \mbox{\hyperlink{classuser_database_1_1_user_database_a1d03dda99beba18da998f4641d83793d}{load\+File}} (self)
+\begin{DoxyCompactList}\small\item\em Load the contents of the file(supplied during initialization). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classuser_database_1_1_user_database_ab590f9a7c94a0a15440813cebc24d32b}\label{classuser_database_1_1_user_database_ab590f9a7c94a0a15440813cebc24d32b}} 
+def \mbox{\hyperlink{classuser_database_1_1_user_database_ab590f9a7c94a0a15440813cebc24d32b}{write\+File}} (self)
+\begin{DoxyCompactList}\small\item\em Write the current database state to file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classuser_database_1_1_user_database_a2aab72bb11a6dcf4631508e170559c05}\label{classuser_database_1_1_user_database_a2aab72bb11a6dcf4631508e170559c05}} 
+\mbox{\hyperlink{classuser_database_1_1_user_database_a2aab72bb11a6dcf4631508e170559c05}{users\+By\+Id}}
+\begin{DoxyCompactList}\small\item\em A dictionary of all users in the database, where the keys are the users\textquotesingle{} ids. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuser_database_1_1_user_database_a651fa4f621611fcd947e6fcbd8193010}{users\+By\+FL}}
+\begin{DoxyCompactList}\small\item\em A dictionary of Sorted\+List. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classuser_database_1_1_user_database_a7e1faa00bf22396963dc8f873d8feccc}\label{classuser_database_1_1_user_database_a7e1faa00bf22396963dc8f873d8feccc}} 
+\mbox{\hyperlink{classuser_database_1_1_user_database_a7e1faa00bf22396963dc8f873d8feccc}{file}}
+\begin{DoxyCompactList}\small\item\em The location of the file from which the database will load and/or save its data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuser_database_1_1_user_database_a1c786f03889c73e2ec3a08e269da215a}{current\+User\+Id}}
+\begin{DoxyCompactList}\small\item\em The id that will be assigned to next added user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class holds a collection of \mbox{\hyperlink{classuser_1_1_user}{user.\+User}}, and has methods for manipulating these objects. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classuser_database_1_1_user_database_a263dbb68e052b017fb5a007994b63a01}\label{classuser_database_1_1_user_database_a263dbb68e052b017fb5a007994b63a01}} 
+\index{userDatabase.UserDatabase@{userDatabase.UserDatabase}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!userDatabase.UserDatabase@{userDatabase.UserDatabase}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def user\+Database.\+User\+Database.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{file = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+The \mbox{\hyperlink{classuser_database_1_1_user_database}{User\+Database}} initializer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file path for the database file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \mbox{\hyperlink{classuser_database_1_1_user_database}{User\+Database}} instance. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classuser_database_1_1_user_database_af0c36af712141741fbba2cb1c7d39763}\label{classuser_database_1_1_user_database_af0c36af712141741fbba2cb1c7d39763}} 
+\index{userDatabase.UserDatabase@{userDatabase.UserDatabase}!addNewUser@{addNewUser}}
+\index{addNewUser@{addNewUser}!userDatabase.UserDatabase@{userDatabase.UserDatabase}}
+\doxysubsubsection{\texorpdfstring{addNewUser()}{addNewUser()}}
+{\footnotesize\ttfamily def user\+Database.\+User\+Database.\+add\+New\+User (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\mbox{\hyperlink{classuser_1_1_user}{User}}}]{user }\end{DoxyParamCaption})}
+
+
+
+Takes a newly created user, asigns it an id, sets it\textquotesingle{}s database reference to this \mbox{\hyperlink{classuser_database_1_1_user_database}{User\+Database}}, and adds it to the required collections. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & A newly created user. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classuser_database_1_1_user_database_a2e3cc55aaf50c81826eecccec625ec6c}\label{classuser_database_1_1_user_database_a2e3cc55aaf50c81826eecccec625ec6c}} 
+\index{userDatabase.UserDatabase@{userDatabase.UserDatabase}!addUserAfterNameChange@{addUserAfterNameChange}}
+\index{addUserAfterNameChange@{addUserAfterNameChange}!userDatabase.UserDatabase@{userDatabase.UserDatabase}}
+\doxysubsubsection{\texorpdfstring{addUserAfterNameChange()}{addUserAfterNameChange()}}
+{\footnotesize\ttfamily def user\+Database.\+User\+Database.\+add\+User\+After\+Name\+Change (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\mbox{\hyperlink{classuser_1_1_user}{User}}}]{user }\end{DoxyParamCaption})}
+
+
+
+To be used after \mbox{\hyperlink{classuser_database_1_1_user_database_a844a75614c21d4e6d0088f09470df04d}{remove\+User\+Before\+Name\+Change()}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & The user whose name has just been changed, and who had previously been temporarily removed from the \char`\"{}\+FL\char`\"{} dictionary. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classuser_database_1_1_user_database_a82d4d9d651c56ec54ab73600112d6ba5}\label{classuser_database_1_1_user_database_a82d4d9d651c56ec54ab73600112d6ba5}} 
+\index{userDatabase.UserDatabase@{userDatabase.UserDatabase}!getRecomendations@{getRecomendations}}
+\index{getRecomendations@{getRecomendations}!userDatabase.UserDatabase@{userDatabase.UserDatabase}}
+\doxysubsubsection{\texorpdfstring{getRecomendations()}{getRecomendations()}}
+{\footnotesize\ttfamily def user\+Database.\+User\+Database.\+get\+Recomendations (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{current\+User,  }\item[{}]{n = {\ttfamily 5} }\end{DoxyParamCaption})}
+
+
+
+Get friends/people with common interests for a given user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+User} & The user for whom we are looking for recomendations. \\
+\hline
+{\em n} & Optionaly number of recomendations to find. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of recomended users. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classuser_database_1_1_user_database_a58841ec49111f62918a89211751f93b9}\label{classuser_database_1_1_user_database_a58841ec49111f62918a89211751f93b9}} 
+\index{userDatabase.UserDatabase@{userDatabase.UserDatabase}!getUserFromId@{getUserFromId}}
+\index{getUserFromId@{getUserFromId}!userDatabase.UserDatabase@{userDatabase.UserDatabase}}
+\doxysubsubsection{\texorpdfstring{getUserFromId()}{getUserFromId()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{classuser_1_1_user}{User}} user\+Database.\+User\+Database.\+get\+User\+From\+Id (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{int}]{user\+Id }\end{DoxyParamCaption})}
+
+
+
+Get a \mbox{\hyperlink{classuser_1_1_user}{user.\+User}} reference from a user id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Id} & A user id. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The user corresponding to the user id. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classuser_database_1_1_user_database_ab8eaaf537c9950d9ace3e4c879deffa7}\label{classuser_database_1_1_user_database_ab8eaaf537c9950d9ace3e4c879deffa7}} 
+\index{userDatabase.UserDatabase@{userDatabase.UserDatabase}!removeUser@{removeUser}}
+\index{removeUser@{removeUser}!userDatabase.UserDatabase@{userDatabase.UserDatabase}}
+\doxysubsubsection{\texorpdfstring{removeUser()}{removeUser()}}
+{\footnotesize\ttfamily  bool user\+Database.\+User\+Database.\+remove\+User (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\mbox{\hyperlink{classuser_1_1_user}{User}}}]{user }\end{DoxyParamCaption})}
+
+
+
+Remove a user from the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & The \mbox{\hyperlink{classuser_1_1_user}{user.\+User}} to remove. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the user could be removed, False if not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classuser_database_1_1_user_database_a844a75614c21d4e6d0088f09470df04d}\label{classuser_database_1_1_user_database_a844a75614c21d4e6d0088f09470df04d}} 
+\index{userDatabase.UserDatabase@{userDatabase.UserDatabase}!removeUserBeforeNameChange@{removeUserBeforeNameChange}}
+\index{removeUserBeforeNameChange@{removeUserBeforeNameChange}!userDatabase.UserDatabase@{userDatabase.UserDatabase}}
+\doxysubsubsection{\texorpdfstring{removeUserBeforeNameChange()}{removeUserBeforeNameChange()}}
+{\footnotesize\ttfamily def user\+Database.\+User\+Database.\+remove\+User\+Before\+Name\+Change (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\mbox{\hyperlink{classuser_1_1_user}{User}}}]{user }\end{DoxyParamCaption})}
+
+
+
+Used for when a user wants to change their name. 
+
+This will remove the user from the \char`\"{}first letter\char`\"{} dictionary. \mbox{\hyperlink{classuser_database_1_1_user_database_a2e3cc55aaf50c81826eecccec625ec6c}{add\+User\+After\+Name\+Change()}} MUST be called after the name change. 
+\begin{DoxyParams}{Parameters}
+{\em user} & The user that will have their name changed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classuser_database_1_1_user_database_a3883886f0b5bffabd248abee000d1546}\label{classuser_database_1_1_user_database_a3883886f0b5bffabd248abee000d1546}} 
+\index{userDatabase.UserDatabase@{userDatabase.UserDatabase}!searchUsers@{searchUsers}}
+\index{searchUsers@{searchUsers}!userDatabase.UserDatabase@{userDatabase.UserDatabase}}
+\doxysubsubsection{\texorpdfstring{searchUsers()}{searchUsers()}}
+{\footnotesize\ttfamily def user\+Database.\+User\+Database.\+search\+Users (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name = {\ttfamily None},  }\item[{}]{study\+Year = {\ttfamily None},  }\item[{}]{study\+Field = {\ttfamily None},  }\item[{}]{interests = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Search all the users, using the supplied search parameters, all of which are optionnal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name search (partial match). \\
+\hline
+{\em study\+Year} & Year of study search. \\
+\hline
+{\em study\+Field} & Field of study search (partial match). \\
+\hline
+{\em interests} & Set of interests to search for (matches with supersets). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classuser_database_1_1_user_database_a37afafe83cb134cb6b712f21574fd23b}\label{classuser_database_1_1_user_database_a37afafe83cb134cb6b712f21574fd23b}} 
+\index{userDatabase.UserDatabase@{userDatabase.UserDatabase}!toFileString@{toFileString}}
+\index{toFileString@{toFileString}!userDatabase.UserDatabase@{userDatabase.UserDatabase}}
+\doxysubsubsection{\texorpdfstring{toFileString()}{toFileString()}}
+{\footnotesize\ttfamily def user\+Database.\+User\+Database.\+to\+File\+String (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Convert the database into a string which can be written to a file. 
+
+\begin{DoxyReturn}{Returns}
+The database\textquotesingle{}s file string representation. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classuser_database_1_1_user_database_a1c786f03889c73e2ec3a08e269da215a}\label{classuser_database_1_1_user_database_a1c786f03889c73e2ec3a08e269da215a}} 
+\index{userDatabase.UserDatabase@{userDatabase.UserDatabase}!currentUserId@{currentUserId}}
+\index{currentUserId@{currentUserId}!userDatabase.UserDatabase@{userDatabase.UserDatabase}}
+\doxysubsubsection{\texorpdfstring{currentUserId}{currentUserId}}
+{\footnotesize\ttfamily user\+Database.\+User\+Database.\+current\+User\+Id}
+
+
+
+The id that will be assigned to next added user. 
+
+This is incremented evertime a new user is added. \mbox{\Hypertarget{classuser_database_1_1_user_database_a651fa4f621611fcd947e6fcbd8193010}\label{classuser_database_1_1_user_database_a651fa4f621611fcd947e6fcbd8193010}} 
+\index{userDatabase.UserDatabase@{userDatabase.UserDatabase}!usersByFL@{usersByFL}}
+\index{usersByFL@{usersByFL}!userDatabase.UserDatabase@{userDatabase.UserDatabase}}
+\doxysubsubsection{\texorpdfstring{usersByFL}{usersByFL}}
+{\footnotesize\ttfamily user\+Database.\+User\+Database.\+users\+By\+FL}
+
+
+
+A dictionary of Sorted\+List. 
+
+The keys are the 26 letters of the alphabet. Each Sorted\+List contains all users whose names begin with the corresponding letter, and these lists are setup to sort by the users\textquotesingle{} full name. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+user\+Database.\+py\end{DoxyCompactItemize}

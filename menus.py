@@ -1,8 +1,15 @@
-from os import sep
-from user import ALL_INTERESTS, User
+"""
+This module contains the different menu and sub-menu functions.
+"""
+
+from user import User
 from userDatabase import UserDatabase
 from interface import FLDictToStr, clearAndLogo, clearConsole, inputIntInRange, userListToIdsAndNamesStr, userToIdAndNameStr, userToInfoCardString
 
+
+## The main menu
+#  This function will call other sub-menus based off of what the user enters.
+#  @param database The userDatabase.UserDatabase the menu will be running on.
 def main_menu(database):
     while True:
         clearAndLogo()
@@ -31,6 +38,8 @@ def main_menu(database):
             return
 
 #----LOGGED IN SUB-MENU FUNCTIONS--------------------------------------------------------------
+## Menu to ask the user to enter their user id. This will then call loggedIn_menu().
+#  @param database The userDatabase.UserDatabase the menu will be running on.
 def login_menu(database: UserDatabase):
     clearAndLogo()
     
@@ -39,9 +48,11 @@ def login_menu(database: UserDatabase):
 
     while not id in database.usersById:
         id = int(input("ERROR: User does not exist: "))
-    loggedIn_menu(database, database.getUserFromId(id))
+    loggedIn_menu(database.getUserFromId(id))
 
-def loggedIn_menu(database: UserDatabase, user: User):
+## Sub-menu for functions that require the user to be logged in.
+#  @param user The user that is currently logged in.
+def loggedIn_menu(user: User):
     while True:
         user.database.writeFile()
         clearAndLogo()
@@ -64,29 +75,33 @@ def loggedIn_menu(database: UserDatabase, user: User):
             user_information_menu(user)
         elif choice == 2:
             update_user_menu(user)
-            database.writeFile()
+            user.database.writeFile()
         elif choice == 3:
             follow_menu(user)
-            database.writeFile()
+            user.database.writeFile()
         elif choice == 4:
             unfollow_menu(user)
-            database.writeFile()
+            user.database.writeFile()
         elif choice == 5:
             display_followers_menu(user)
         elif choice == 6:
             delete_account_menu(user)
-            database.writeFile()
+            user.database.writeFile()
             return
         elif choice == 7:
             return
         
 
+## Display a user's information
+#  @param user A user.
 def user_information_menu(user: User):
     clearAndLogo()
     print("----USER INFORMATION----")
     print(userToInfoCardString(user))
     input("Press enter to continue")
 
+## Allow the user to update their information.
+#  @param user The user whose information will be updated.
 def update_user_menu(user: User):
     clearAndLogo()
     print("----UPDATE USER PROFILE----")
@@ -105,7 +120,7 @@ def update_user_menu(user: User):
     newResidence       = input(f"Residence ({oldResidence}): ")
 
     print("  Possible interests: ")
-    for i, interest in enumerate(ALL_INTERESTS):
+    for i, interest in enumerate(User.ALL_INTERESTS):
         print(f"    {i}. {interest} ")
 
     interestsString = input(f"Interests ({' '.join([str(i+1) for i in oldInterestsSet])}): ")
@@ -127,17 +142,21 @@ def update_user_menu(user: User):
         user.residence = newResidence
     if len(newInterestsSet) != 0:
         user.interests = newInterestsSet
-        
+    
+## Allow a user to follow another
+#  @param user The current user.
 def follow_menu(user: User):
     while True:
         clearAndLogo()
         print("----FOLLOW MENU----")
         print("You are currently following: ")
-        print("    ", userListToIdsAndNamesStr(user.getFollowing(), seperator= "\n   "))
+        for u in user.getFollowing():
+            print("    ", userToIdAndNameStr(u))
 
         recomendations = user.database.getRecomendations(user)
         print("Users with lots in common: ")
-        print("    ", userListToIdsAndNamesStr(recomendations, seperator= "\n   "))
+        for r in recomendations:
+            print("    ", userToIdAndNameStr(r))
 
 
         choiceString = input("Enter a user's id to follow(empty to exit): ")
@@ -157,6 +176,8 @@ def follow_menu(user: User):
 
         input()
 
+## Allow a user to unfollow another
+#  @param The current user.
 def unfollow_menu(user: User):
     while True:
         clearAndLogo()
@@ -180,13 +201,19 @@ def unfollow_menu(user: User):
 
         input()
 
+## Display a given user their followers.
+#  @param user The current user
 def display_followers_menu(user: User):
     clearAndLogo()
     print("----FOLLOWERS----")
     print(f"You are currently being followed by {len(user.getFollowers())} people")
-    print("    ", userListToIdsAndNamesStr(user.getFollowers(), seperator="\n    "))
+    for f in user.getFollowers():
+        print("    ", userToIdAndNameStr(f))
+    
     input("Press enter to continue")
 
+## Allow a user to delete their account(with confirmation).
+#  @param user The current user.
 def delete_account_menu(user: User):
     clearAndLogo()
     print("----ACCOUNT DELETION----")
@@ -204,7 +231,10 @@ def delete_account_menu(user: User):
 #----------------------------------------------------------------------------------------------
 
 
-
+## A menu to show the user a list of users. The user can then ask to see more details on a particular user.
+#  @param database The database being used for the menu.
+#  @param userList A list of users to display.
+#  @param prompt Change the default message display before showing the user list.
 def userList_menu(database: UserDatabase, userList: list, prompt="User list: "):
     while True:
         clearAndLogo()
@@ -223,7 +253,8 @@ def userList_menu(database: UserDatabase, userList: list, prompt="User list: "):
                 user_information_menu(user)
          
 
-
+## Allow the user to search for users using different fields. Leaving a certain field blank will not use that field for the search.
+#  @param database The database being used for the menu.
 def search_menu(database: UserDatabase):
     clearAndLogo()
     print("----USER SEARCH----")
@@ -242,7 +273,7 @@ def search_menu(database: UserDatabase):
     if (field == ""): field = None
 
     print("  Possible interests: ")
-    for i, interest in enumerate(ALL_INTERESTS):
+    for i, interest in enumerate(User.ALL_INTERESTS):
         print(f"    {i}. {interest} ")
 
     interestsString = input("Intersts:")
@@ -257,6 +288,8 @@ def search_menu(database: UserDatabase):
 
     userList_menu(database, results, "Search results: ")
 
+## Allow the user to input a new user.
+#  @param database The database to which the new user will be added.
 def new_user_menu(database: UserDatabase):
     clearAndLogo()
     print("----CREATE A NEW USER PROFILE----")
@@ -267,7 +300,7 @@ def new_user_menu(database: UserDatabase):
     residence  =     input("Residence   : ")
 
     print("  Possible interests: ")
-    for i, interest in enumerate(ALL_INTERESTS):
+    for i, interest in enumerate(User.ALL_INTERESTS):
         print(f"    {i}. {interest} ")
 
     interestsString = input("List of interests(by index): ")
@@ -283,6 +316,9 @@ def new_user_menu(database: UserDatabase):
     print(f"Your id number is: {newUser.id}")
     input()
 
+
+## View all users by the first letter of their names.
+#  @param database The database whose users we want to display.
 def view_all_users_menu(database: UserDatabase):
     while True:
         clearConsole() # We don't want to show the logo because the this view already takes up a lot a space

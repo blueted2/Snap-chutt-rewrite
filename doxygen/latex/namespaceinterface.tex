@@ -1,0 +1,162 @@
+\hypertarget{namespaceinterface}{}\doxysection{interface Namespace Reference}
+\label{namespaceinterface}\index{interface@{interface}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespaceinterface_a3fbce18333a7f868e4442af88f3005f8}{clear\+And\+Logo}} ()
+\begin{DoxyCompactList}\small\item\em Clear the console and display the logo. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceinterface_a19e9c91a40ea5a711916407d7cb1299b}{clear\+Console}} ()
+\begin{DoxyCompactList}\small\item\em Clear the console. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceinterface_a247058bb22af336b96e6e4a8fcc29ffe}{user\+To\+Id\+And\+Name\+Str}} (\mbox{\hyperlink{classuser_1_1_user}{User}} user)
+\begin{DoxyCompactList}\small\item\em Create a string for display a user\textquotesingle{}s id and name. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceinterface_a2c0a4e7835df98d0af1089a54b3a083a}{user\+List\+To\+Ids\+And\+Names\+List}} (list user\+List)
+\begin{DoxyCompactList}\small\item\em Create a list of strings containing the users\textquotesingle{} ids and names. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceinterface_a6e649a4676b85f0d365b1f0cf3969909}{user\+List\+To\+Ids\+And\+Names\+Str}} (list user\+List, seperator=\char`\"{}\textbackslash{}n\char`\"{})
+\begin{DoxyCompactList}\small\item\em Create one big string of users\textquotesingle{} ids and names. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceinterface_a20812310983903895e8fb9dbe43ca852}{FLDict\+To\+Str}} (dict user\+Dict)
+\begin{DoxyCompactList}\small\item\em Create a string representation of the \char`\"{}first letter\char`\"{} dictionary used in \mbox{\hyperlink{classuser_database_1_1_user_database}{user\+Database.\+User\+Database}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceinterface_a5ee59dcb59c445ce7eff01fcc992731c}{user\+To\+Info\+Card\+String}} (\mbox{\hyperlink{classuser_1_1_user}{User}} user)
+\begin{DoxyCompactList}\small\item\em Create a string representation/ \char`\"{}info card\char`\"{} for a given user. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceinterface_af78da1c2efaa09c758e5ff5f50a51386}{input\+Int\+In\+Range}} (start, end, prompt=\char`\"{}Choice\+: \char`\"{}, error=\char`\"{}ERROR\+: Invalid choice\char`\"{})
+\begin{DoxyCompactList}\small\item\em A utility function for getting and integer from the user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}This module contains various functions for displaying to and reading from the console.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceinterface_a3fbce18333a7f868e4442af88f3005f8}\label{namespaceinterface_a3fbce18333a7f868e4442af88f3005f8}} 
+\index{interface@{interface}!clearAndLogo@{clearAndLogo}}
+\index{clearAndLogo@{clearAndLogo}!interface@{interface}}
+\doxysubsubsection{\texorpdfstring{clearAndLogo()}{clearAndLogo()}}
+{\footnotesize\ttfamily def interface.\+clear\+And\+Logo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clear the console and display the logo. 
+
+Used when going into a menu. \mbox{\Hypertarget{namespaceinterface_a19e9c91a40ea5a711916407d7cb1299b}\label{namespaceinterface_a19e9c91a40ea5a711916407d7cb1299b}} 
+\index{interface@{interface}!clearConsole@{clearConsole}}
+\index{clearConsole@{clearConsole}!interface@{interface}}
+\doxysubsubsection{\texorpdfstring{clearConsole()}{clearConsole()}}
+{\footnotesize\ttfamily def interface.\+clear\+Console (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clear the console. 
+
+Works on unix and windows. \mbox{\Hypertarget{namespaceinterface_a20812310983903895e8fb9dbe43ca852}\label{namespaceinterface_a20812310983903895e8fb9dbe43ca852}} 
+\index{interface@{interface}!FLDictToStr@{FLDictToStr}}
+\index{FLDictToStr@{FLDictToStr}!interface@{interface}}
+\doxysubsubsection{\texorpdfstring{FLDictToStr()}{FLDictToStr()}}
+{\footnotesize\ttfamily def interface.\+FLDict\+To\+Str (\begin{DoxyParamCaption}\item[{dict}]{user\+Dict }\end{DoxyParamCaption})}
+
+
+
+Create a string representation of the \char`\"{}first letter\char`\"{} dictionary used in \mbox{\hyperlink{classuser_database_1_1_user_database}{user\+Database.\+User\+Database}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Dict} & The FL dictionary \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The string representation of the dictionary. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceinterface_af78da1c2efaa09c758e5ff5f50a51386}\label{namespaceinterface_af78da1c2efaa09c758e5ff5f50a51386}} 
+\index{interface@{interface}!inputIntInRange@{inputIntInRange}}
+\index{inputIntInRange@{inputIntInRange}!interface@{interface}}
+\doxysubsubsection{\texorpdfstring{inputIntInRange()}{inputIntInRange()}}
+{\footnotesize\ttfamily def interface.\+input\+Int\+In\+Range (\begin{DoxyParamCaption}\item[{}]{start,  }\item[{}]{end,  }\item[{}]{prompt = {\ttfamily \char`\"{}Choice\+:~\char`\"{}},  }\item[{}]{error = {\ttfamily \char`\"{}ERROR\+:~Invalid~choice\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+A utility function for getting and integer from the user. 
+
+This function will first prompt the user for a choice, and won\textquotesingle{}t return until a valid choice is made. 
+\begin{DoxyParams}{Parameters}
+{\em start} & The lowest valid value (more than or equal) \\
+\hline
+{\em end} & The highest valid value + 1 (strictly less than) \\
+\hline
+{\em prompt} & Change the default prompt message \\
+\hline
+{\em error} & Change the default error message \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespaceinterface_a2c0a4e7835df98d0af1089a54b3a083a}\label{namespaceinterface_a2c0a4e7835df98d0af1089a54b3a083a}} 
+\index{interface@{interface}!userListToIdsAndNamesList@{userListToIdsAndNamesList}}
+\index{userListToIdsAndNamesList@{userListToIdsAndNamesList}!interface@{interface}}
+\doxysubsubsection{\texorpdfstring{userListToIdsAndNamesList()}{userListToIdsAndNamesList()}}
+{\footnotesize\ttfamily def interface.\+user\+List\+To\+Ids\+And\+Names\+List (\begin{DoxyParamCaption}\item[{list}]{user\+List }\end{DoxyParamCaption})}
+
+
+
+Create a list of strings containing the users\textquotesingle{} ids and names. 
+
+This basically does what \mbox{\hyperlink{namespaceinterface_a247058bb22af336b96e6e4a8fcc29ffe}{user\+To\+Id\+And\+Name\+Str()}} does but for multiple users. 
+\begin{DoxyParams}{Parameters}
+{\em user\+List} & A list of users \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of strings containing the users\textquotesingle{} ids and names. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceinterface_a6e649a4676b85f0d365b1f0cf3969909}\label{namespaceinterface_a6e649a4676b85f0d365b1f0cf3969909}} 
+\index{interface@{interface}!userListToIdsAndNamesStr@{userListToIdsAndNamesStr}}
+\index{userListToIdsAndNamesStr@{userListToIdsAndNamesStr}!interface@{interface}}
+\doxysubsubsection{\texorpdfstring{userListToIdsAndNamesStr()}{userListToIdsAndNamesStr()}}
+{\footnotesize\ttfamily def interface.\+user\+List\+To\+Ids\+And\+Names\+Str (\begin{DoxyParamCaption}\item[{list}]{user\+List,  }\item[{}]{seperator = {\ttfamily \char`\"{}\textbackslash{}n\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Create one big string of users\textquotesingle{} ids and names. 
+
+In essence this takes what \mbox{\hyperlink{namespaceinterface_a2c0a4e7835df98d0af1089a54b3a083a}{user\+List\+To\+Ids\+And\+Names\+List()}} does and joins it together. 
+\begin{DoxyParams}{Parameters}
+{\em user\+List} & A list of users \\
+\hline
+{\em seperator} & An optional parameter to specify what will be used to join the strings together. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A big with users\textquotesingle{} ids and names. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceinterface_a247058bb22af336b96e6e4a8fcc29ffe}\label{namespaceinterface_a247058bb22af336b96e6e4a8fcc29ffe}} 
+\index{interface@{interface}!userToIdAndNameStr@{userToIdAndNameStr}}
+\index{userToIdAndNameStr@{userToIdAndNameStr}!interface@{interface}}
+\doxysubsubsection{\texorpdfstring{userToIdAndNameStr()}{userToIdAndNameStr()}}
+{\footnotesize\ttfamily def interface.\+user\+To\+Id\+And\+Name\+Str (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classuser_1_1_user}{User}}}]{user }\end{DoxyParamCaption})}
+
+
+
+Create a string for display a user\textquotesingle{}s id and name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & The user \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string containing the user\textquotesingle{}s id and name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceinterface_a5ee59dcb59c445ce7eff01fcc992731c}\label{namespaceinterface_a5ee59dcb59c445ce7eff01fcc992731c}} 
+\index{interface@{interface}!userToInfoCardString@{userToInfoCardString}}
+\index{userToInfoCardString@{userToInfoCardString}!interface@{interface}}
+\doxysubsubsection{\texorpdfstring{userToInfoCardString()}{userToInfoCardString()}}
+{\footnotesize\ttfamily def interface.\+user\+To\+Info\+Card\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classuser_1_1_user}{User}}}]{user }\end{DoxyParamCaption})}
+
+
+
+Create a string representation/ \char`\"{}info card\char`\"{} for a given user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & A user. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The user\textquotesingle{}s info card. 
+\end{DoxyReturn}

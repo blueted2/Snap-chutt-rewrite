@@ -1,13 +1,13 @@
-2
+6
 0
 Gregory Holder
 20
 2021
 Programming
 Troyes
-[0, 3, 4]
+[4, 5, 7]
 []
-[]
+[1]
 
 1
 Hugo Bontemps
@@ -16,6 +16,46 @@ Hugo Bontemps
 Linux
 Troyes
 [0, 1, 2]
+[0, 2]
 []
+
+2
+Rick Asley
+56
+1987
+Music
+Neverland
+[2]
 []
+[1, 4]
+
+3
+Test 1
+0
+0
+0
+0
+[5, 6, 7]
+[5]
+[4]
+
+4
+Test 2
+0
+0
+0
+0
+[5, 6, 7]
+[2, 3, 5]
+[]
+
+5
+Test 3
+0
+0
+0
+0
+[5, 6, 7]
+[]
+[3, 4]
 

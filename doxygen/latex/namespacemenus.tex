@@ -1,0 +1,238 @@
+\hypertarget{namespacemenus}{}\doxysection{menus Namespace Reference}
+\label{namespacemenus}\index{menus@{menus}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacemenus_a7994d7c911a61273487b21b29d0bca9b}{main\+\_\+menu}} (database)
+\begin{DoxyCompactList}\small\item\em The main menu This function will call other sub-\/menus based off of what the user enters. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacemenus_a6c4b426cd1bb60aa1677a6ad791468e0}{login\+\_\+menu}} (\mbox{\hyperlink{classuser_database_1_1_user_database}{User\+Database}} database)
+\begin{DoxyCompactList}\small\item\em Menu to ask the user to enter their user id. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacemenus_a30891f03c2a0acd03c73523bc9669cf9}{logged\+In\+\_\+menu}} (\mbox{\hyperlink{classuser_1_1_user}{User}} user)
+\begin{DoxyCompactList}\small\item\em Sub-\/menu for functions that require the user to be logged in. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacemenus_a4db7931c2195e6a16ed032e7241d0b12}{user\+\_\+information\+\_\+menu}} (\mbox{\hyperlink{classuser_1_1_user}{User}} user)
+\begin{DoxyCompactList}\small\item\em Display a user\textquotesingle{}s information. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacemenus_a2b365a888105b443a0215b2c69af847d}{update\+\_\+user\+\_\+menu}} (\mbox{\hyperlink{classuser_1_1_user}{User}} user)
+\begin{DoxyCompactList}\small\item\em Allow the user to update their information. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacemenus_ab6ffa545802977857a8669021d71ee0f}{follow\+\_\+menu}} (\mbox{\hyperlink{classuser_1_1_user}{User}} user)
+\begin{DoxyCompactList}\small\item\em Allow a user to follow another. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacemenus_adedf72859e6733df214b75f46994b6dd}{unfollow\+\_\+menu}} (\mbox{\hyperlink{classuser_1_1_user}{User}} user)
+\begin{DoxyCompactList}\small\item\em Allow a user to unfollow another. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacemenus_ac9b7b29d5baff25607213b0420c98e32}{display\+\_\+followers\+\_\+menu}} (\mbox{\hyperlink{classuser_1_1_user}{User}} user)
+\begin{DoxyCompactList}\small\item\em Display a given user their followers. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacemenus_a985bde21dce3f68f253912be76d238bc}{delete\+\_\+account\+\_\+menu}} (\mbox{\hyperlink{classuser_1_1_user}{User}} user)
+\begin{DoxyCompactList}\small\item\em Allow a user to delete their account(with confirmation). \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacemenus_af4e3449b38979513121624bde2e4f921}{user\+List\+\_\+menu}} (\mbox{\hyperlink{classuser_database_1_1_user_database}{User\+Database}} database, list user\+List, prompt=\char`\"{}User list\+: \char`\"{})
+\begin{DoxyCompactList}\small\item\em A menu to show the user a list of users. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacemenus_aead4978488ee1a8799619b66c29c276d}{search\+\_\+menu}} (\mbox{\hyperlink{classuser_database_1_1_user_database}{User\+Database}} database)
+\begin{DoxyCompactList}\small\item\em Allow the user to search for users using different fields. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacemenus_a56c5f8c17db7be8101db180289e942f1}{new\+\_\+user\+\_\+menu}} (\mbox{\hyperlink{classuser_database_1_1_user_database}{User\+Database}} database)
+\begin{DoxyCompactList}\small\item\em Allow the user to input a new user. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacemenus_aad7d1b44def6db5757f885b9336fb7ef}{view\+\_\+all\+\_\+users\+\_\+menu}} (\mbox{\hyperlink{classuser_database_1_1_user_database}{User\+Database}} database)
+\begin{DoxyCompactList}\small\item\em View all users by the first letter of their names. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}This module contains the different menu and sub-menu functions.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacemenus_a985bde21dce3f68f253912be76d238bc}\label{namespacemenus_a985bde21dce3f68f253912be76d238bc}} 
+\index{menus@{menus}!delete\_account\_menu@{delete\_account\_menu}}
+\index{delete\_account\_menu@{delete\_account\_menu}!menus@{menus}}
+\doxysubsubsection{\texorpdfstring{delete\_account\_menu()}{delete\_account\_menu()}}
+{\footnotesize\ttfamily def menus.\+delete\+\_\+account\+\_\+menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classuser_1_1_user}{User}}}]{user }\end{DoxyParamCaption})}
+
+
+
+Allow a user to delete their account(with confirmation). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & The current user. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacemenus_ac9b7b29d5baff25607213b0420c98e32}\label{namespacemenus_ac9b7b29d5baff25607213b0420c98e32}} 
+\index{menus@{menus}!display\_followers\_menu@{display\_followers\_menu}}
+\index{display\_followers\_menu@{display\_followers\_menu}!menus@{menus}}
+\doxysubsubsection{\texorpdfstring{display\_followers\_menu()}{display\_followers\_menu()}}
+{\footnotesize\ttfamily def menus.\+display\+\_\+followers\+\_\+menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classuser_1_1_user}{User}}}]{user }\end{DoxyParamCaption})}
+
+
+
+Display a given user their followers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & The current user \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacemenus_ab6ffa545802977857a8669021d71ee0f}\label{namespacemenus_ab6ffa545802977857a8669021d71ee0f}} 
+\index{menus@{menus}!follow\_menu@{follow\_menu}}
+\index{follow\_menu@{follow\_menu}!menus@{menus}}
+\doxysubsubsection{\texorpdfstring{follow\_menu()}{follow\_menu()}}
+{\footnotesize\ttfamily def menus.\+follow\+\_\+menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classuser_1_1_user}{User}}}]{user }\end{DoxyParamCaption})}
+
+
+
+Allow a user to follow another. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & The current user. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacemenus_a30891f03c2a0acd03c73523bc9669cf9}\label{namespacemenus_a30891f03c2a0acd03c73523bc9669cf9}} 
+\index{menus@{menus}!loggedIn\_menu@{loggedIn\_menu}}
+\index{loggedIn\_menu@{loggedIn\_menu}!menus@{menus}}
+\doxysubsubsection{\texorpdfstring{loggedIn\_menu()}{loggedIn\_menu()}}
+{\footnotesize\ttfamily def menus.\+logged\+In\+\_\+menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classuser_1_1_user}{User}}}]{user }\end{DoxyParamCaption})}
+
+
+
+Sub-\/menu for functions that require the user to be logged in. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & The user that is currently logged in. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacemenus_a6c4b426cd1bb60aa1677a6ad791468e0}\label{namespacemenus_a6c4b426cd1bb60aa1677a6ad791468e0}} 
+\index{menus@{menus}!login\_menu@{login\_menu}}
+\index{login\_menu@{login\_menu}!menus@{menus}}
+\doxysubsubsection{\texorpdfstring{login\_menu()}{login\_menu()}}
+{\footnotesize\ttfamily def menus.\+login\+\_\+menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classuser_database_1_1_user_database}{User\+Database}}}]{database }\end{DoxyParamCaption})}
+
+
+
+Menu to ask the user to enter their user id. 
+
+This will then call \mbox{\hyperlink{namespacemenus_a30891f03c2a0acd03c73523bc9669cf9}{logged\+In\+\_\+menu()}}. 
+\begin{DoxyParams}{Parameters}
+{\em database} & The \mbox{\hyperlink{classuser_database_1_1_user_database}{user\+Database.\+User\+Database}} the menu will be running on. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacemenus_a7994d7c911a61273487b21b29d0bca9b}\label{namespacemenus_a7994d7c911a61273487b21b29d0bca9b}} 
+\index{menus@{menus}!main\_menu@{main\_menu}}
+\index{main\_menu@{main\_menu}!menus@{menus}}
+\doxysubsubsection{\texorpdfstring{main\_menu()}{main\_menu()}}
+{\footnotesize\ttfamily def menus.\+main\+\_\+menu (\begin{DoxyParamCaption}\item[{}]{database }\end{DoxyParamCaption})}
+
+
+
+The main menu This function will call other sub-\/menus based off of what the user enters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em database} & The \mbox{\hyperlink{classuser_database_1_1_user_database}{user\+Database.\+User\+Database}} the menu will be running on. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacemenus_a56c5f8c17db7be8101db180289e942f1}\label{namespacemenus_a56c5f8c17db7be8101db180289e942f1}} 
+\index{menus@{menus}!new\_user\_menu@{new\_user\_menu}}
+\index{new\_user\_menu@{new\_user\_menu}!menus@{menus}}
+\doxysubsubsection{\texorpdfstring{new\_user\_menu()}{new\_user\_menu()}}
+{\footnotesize\ttfamily def menus.\+new\+\_\+user\+\_\+menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classuser_database_1_1_user_database}{User\+Database}}}]{database }\end{DoxyParamCaption})}
+
+
+
+Allow the user to input a new user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em database} & The database to which the new user will be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacemenus_aead4978488ee1a8799619b66c29c276d}\label{namespacemenus_aead4978488ee1a8799619b66c29c276d}} 
+\index{menus@{menus}!search\_menu@{search\_menu}}
+\index{search\_menu@{search\_menu}!menus@{menus}}
+\doxysubsubsection{\texorpdfstring{search\_menu()}{search\_menu()}}
+{\footnotesize\ttfamily def menus.\+search\+\_\+menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classuser_database_1_1_user_database}{User\+Database}}}]{database }\end{DoxyParamCaption})}
+
+
+
+Allow the user to search for users using different fields. 
+
+Leaving a certain field blank will not use that field for the search. 
+\begin{DoxyParams}{Parameters}
+{\em database} & The database being used for the menu. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacemenus_adedf72859e6733df214b75f46994b6dd}\label{namespacemenus_adedf72859e6733df214b75f46994b6dd}} 
+\index{menus@{menus}!unfollow\_menu@{unfollow\_menu}}
+\index{unfollow\_menu@{unfollow\_menu}!menus@{menus}}
+\doxysubsubsection{\texorpdfstring{unfollow\_menu()}{unfollow\_menu()}}
+{\footnotesize\ttfamily def menus.\+unfollow\+\_\+menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classuser_1_1_user}{User}}}]{user }\end{DoxyParamCaption})}
+
+
+
+Allow a user to unfollow another. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & current user. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacemenus_a2b365a888105b443a0215b2c69af847d}\label{namespacemenus_a2b365a888105b443a0215b2c69af847d}} 
+\index{menus@{menus}!update\_user\_menu@{update\_user\_menu}}
+\index{update\_user\_menu@{update\_user\_menu}!menus@{menus}}
+\doxysubsubsection{\texorpdfstring{update\_user\_menu()}{update\_user\_menu()}}
+{\footnotesize\ttfamily def menus.\+update\+\_\+user\+\_\+menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classuser_1_1_user}{User}}}]{user }\end{DoxyParamCaption})}
+
+
+
+Allow the user to update their information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & The user whose information will be updated. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacemenus_a4db7931c2195e6a16ed032e7241d0b12}\label{namespacemenus_a4db7931c2195e6a16ed032e7241d0b12}} 
+\index{menus@{menus}!user\_information\_menu@{user\_information\_menu}}
+\index{user\_information\_menu@{user\_information\_menu}!menus@{menus}}
+\doxysubsubsection{\texorpdfstring{user\_information\_menu()}{user\_information\_menu()}}
+{\footnotesize\ttfamily def menus.\+user\+\_\+information\+\_\+menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classuser_1_1_user}{User}}}]{user }\end{DoxyParamCaption})}
+
+
+
+Display a user\textquotesingle{}s information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & A user. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacemenus_af4e3449b38979513121624bde2e4f921}\label{namespacemenus_af4e3449b38979513121624bde2e4f921}} 
+\index{menus@{menus}!userList\_menu@{userList\_menu}}
+\index{userList\_menu@{userList\_menu}!menus@{menus}}
+\doxysubsubsection{\texorpdfstring{userList\_menu()}{userList\_menu()}}
+{\footnotesize\ttfamily def menus.\+user\+List\+\_\+menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classuser_database_1_1_user_database}{User\+Database}}}]{database,  }\item[{list}]{user\+List,  }\item[{}]{prompt = {\ttfamily \char`\"{}User~list\+:~\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+A menu to show the user a list of users. 
+
+The user can then ask to see more details on a particular user. 
+\begin{DoxyParams}{Parameters}
+{\em database} & The database being used for the menu. \\
+\hline
+{\em user\+List} & A list of users to display. \\
+\hline
+{\em prompt} & Change the default message display before showing the user list. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacemenus_aad7d1b44def6db5757f885b9336fb7ef}\label{namespacemenus_aad7d1b44def6db5757f885b9336fb7ef}} 
+\index{menus@{menus}!view\_all\_users\_menu@{view\_all\_users\_menu}}
+\index{view\_all\_users\_menu@{view\_all\_users\_menu}!menus@{menus}}
+\doxysubsubsection{\texorpdfstring{view\_all\_users\_menu()}{view\_all\_users\_menu()}}
+{\footnotesize\ttfamily def menus.\+view\+\_\+all\+\_\+users\+\_\+menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classuser_database_1_1_user_database}{User\+Database}}}]{database }\end{DoxyParamCaption})}
+
+
+
+View all users by the first letter of their names. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em database} & The database whose users we want to display. \\
+\hline
+\end{DoxyParams}

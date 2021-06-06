@@ -1,0 +1,261 @@
+\hypertarget{classuser_1_1_user}{}\doxysection{user.\+User Class Reference}
+\label{classuser_1_1_user}\index{user.User@{user.User}}
+
+
+The user class.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classuser_1_1_user_a32d481606c889f82bd4b3387f938e8d9}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, str \mbox{\hyperlink{classuser_1_1_user_ae16ab11b7353f51428f35be6cefe8f8b}{full\+Name}}=\char`\"{}Test \mbox{\hyperlink{classuser_1_1_user}{User}}\char`\"{}, int \mbox{\hyperlink{classuser_1_1_user_a21496eb2b30e471adb35b60a2847e549}{age}}=18, int \mbox{\hyperlink{classuser_1_1_user_ac6746681d277e36ac65e57b97b6f2e3a}{study\+Year}}=2021, str \mbox{\hyperlink{classuser_1_1_user_a15277f6dcfd2083dc443939a7de37c49}{study\+Field}}=\char`\"{}Testing\char`\"{}, str \mbox{\hyperlink{classuser_1_1_user_a80c04221bfc7c4adba80579c1d2dc121}{residence}}=\char`\"{}My Computer\char`\"{}, set \mbox{\hyperlink{classuser_1_1_user_abec0f5ffb945487bf69b8ace38bdcf3d}{interests}}=set(\mbox{[}1, 3, 6\mbox{]}), \mbox{\hyperlink{classuser_1_1_user_a130e44adf0a5f04a5277831b120fa1d2}{id}}=-\/1, \mbox{\hyperlink{classuser_1_1_user_a6bb95f45521b377d327788cb3a4e0346}{following}}=set(), \mbox{\hyperlink{classuser_1_1_user_a6c75e0121b5cd3810b18ba8bb5415731}{followers}}=set())
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classuser_1_1_user}{User}} class initializer. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classuser_1_1_user_a311b8450e21b7c683f5dfd30e348b3ba}{first\+Letter}} (self)
+\item 
+bool \mbox{\hyperlink{classuser_1_1_user_a3918462744da55ecd9aab4f62cd39b51}{follow}} (self, following\+User)
+\begin{DoxyCompactList}\small\item\em Add the supplied user\textquotesingle{}s id to the this user\textquotesingle{}s following set, and this user\textquotesingle{}s id to the supplied user\textquotesingle{}s followers set. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classuser_1_1_user_a43bc1d4107b7612f4f35b9f3e6232896}{unfollow}} (self, unfollowing\+User)
+\begin{DoxyCompactList}\small\item\em Does the opposite of \mbox{\hyperlink{classuser_1_1_user_a3918462744da55ecd9aab4f62cd39b51}{follow()}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classuser_1_1_user_ae16ab11b7353f51428f35be6cefe8f8b}{full\+Name}} (self)
+\begin{DoxyCompactList}\small\item\em A getter method for the user\textquotesingle{}s full\+Name. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classuser_1_1_user_a64f2d9348cd6ba95939a40575d0e5292}{get\+Following}} (self)
+\begin{DoxyCompactList}\small\item\em Get a list of users that this user if following. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classuser_1_1_user_ae697622553d04ee1a57c78a1ded01591}{get\+Followers}} (self)
+\begin{DoxyCompactList}\small\item\em Get a list of users following this user. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classuser_1_1_user_a4303cdb905cfb4c1e37f1fb53762b487}{full\+Name}} (self, str full\+Name)
+\begin{DoxyCompactList}\small\item\em A setter method for the user\textquotesingle{}s fullname. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classuser_1_1_user_a51697ff1fc93bea3c44b36b7fbdf8174}{\+\_\+\+\_\+repr\+\_\+\+\_\+}} (self)
+\begin{DoxyCompactList}\small\item\em A simple string representation of the user. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classuser_1_1_user_ad82d703c7653ae075f22febb5ea507dc}{to\+File\+String}} (self)
+\begin{DoxyCompactList}\small\item\em Convert the \mbox{\hyperlink{classuser_1_1_user}{User}} object into a string which can be written to a file. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classuser_1_1_user_ace0a2d6b44e22985f0c4d59db0236281}{file\+String\+List\+To\+User}} (list lines)
+\begin{DoxyCompactList}\small\item\em Convert the supplied list of lines (probably obtained from a file) into a new \mbox{\hyperlink{classuser_1_1_user}{User}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classuser_1_1_user_a21496eb2b30e471adb35b60a2847e549}\label{classuser_1_1_user_a21496eb2b30e471adb35b60a2847e549}} 
+\mbox{\hyperlink{classuser_1_1_user_a21496eb2b30e471adb35b60a2847e549}{age}}
+\begin{DoxyCompactList}\small\item\em The user\textquotesingle{}s age. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classuser_1_1_user_ac6746681d277e36ac65e57b97b6f2e3a}\label{classuser_1_1_user_ac6746681d277e36ac65e57b97b6f2e3a}} 
+\mbox{\hyperlink{classuser_1_1_user_ac6746681d277e36ac65e57b97b6f2e3a}{study\+Year}}
+\begin{DoxyCompactList}\small\item\em The user\textquotesingle{}s year of study. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classuser_1_1_user_a15277f6dcfd2083dc443939a7de37c49}\label{classuser_1_1_user_a15277f6dcfd2083dc443939a7de37c49}} 
+\mbox{\hyperlink{classuser_1_1_user_a15277f6dcfd2083dc443939a7de37c49}{study\+Field}}
+\begin{DoxyCompactList}\small\item\em The user\textquotesingle{}s field of study. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classuser_1_1_user_a80c04221bfc7c4adba80579c1d2dc121}\label{classuser_1_1_user_a80c04221bfc7c4adba80579c1d2dc121}} 
+\mbox{\hyperlink{classuser_1_1_user_a80c04221bfc7c4adba80579c1d2dc121}{residence}}
+\begin{DoxyCompactList}\small\item\em The user\textquotesingle{}s residence. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classuser_1_1_user_abec0f5ffb945487bf69b8ace38bdcf3d}\label{classuser_1_1_user_abec0f5ffb945487bf69b8ace38bdcf3d}} 
+\mbox{\hyperlink{classuser_1_1_user_abec0f5ffb945487bf69b8ace38bdcf3d}{interests}}
+\begin{DoxyCompactList}\small\item\em The user\textquotesingle{}s intersts, represented by the indices of interests which can be found in \mbox{\hyperlink{classuser_1_1_user_a9a0bce2cd6558a35a946f4e1b1c66efe}{ALL\+\_\+\+INTERESTS}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classuser_1_1_user_a130e44adf0a5f04a5277831b120fa1d2}\label{classuser_1_1_user_a130e44adf0a5f04a5277831b120fa1d2}} 
+\mbox{\hyperlink{classuser_1_1_user_a130e44adf0a5f04a5277831b120fa1d2}{id}}
+\begin{DoxyCompactList}\small\item\em The user\textquotesingle{}s id. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classuser_1_1_user_a6bb95f45521b377d327788cb3a4e0346}\label{classuser_1_1_user_a6bb95f45521b377d327788cb3a4e0346}} 
+\mbox{\hyperlink{classuser_1_1_user_a6bb95f45521b377d327788cb3a4e0346}{following}}
+\begin{DoxyCompactList}\small\item\em The set of ids for the users this user is following. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classuser_1_1_user_a6c75e0121b5cd3810b18ba8bb5415731}\label{classuser_1_1_user_a6c75e0121b5cd3810b18ba8bb5415731}} 
+\mbox{\hyperlink{classuser_1_1_user_a6c75e0121b5cd3810b18ba8bb5415731}{followers}}
+\begin{DoxyCompactList}\small\item\em The set of ids for the users following this user. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classuser_1_1_user_a8844808b66842d1e169104d71ed002a7}\label{classuser_1_1_user_a8844808b66842d1e169104d71ed002a7}} 
+\mbox{\hyperlink{classuser_1_1_user_a8844808b66842d1e169104d71ed002a7}{database}}
+\begin{DoxyCompactList}\small\item\em A reference to the \mbox{\hyperlink{classuser_database_1_1_user_database}{user\+Database.\+User\+Database}} containing this user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classuser_1_1_user_a9a0bce2cd6558a35a946f4e1b1c66efe}\label{classuser_1_1_user_a9a0bce2cd6558a35a946f4e1b1c66efe}} 
+tuple \mbox{\hyperlink{classuser_1_1_user_a9a0bce2cd6558a35a946f4e1b1c66efe}{ALL\+\_\+\+INTERESTS}} = (\char`\"{}sport\char`\"{}, \char`\"{}cinema\char`\"{}, \char`\"{}art\char`\"{}, \char`\"{}health\char`\"{}, \char`\"{}technology\char`\"{}, \char`\"{}diy\char`\"{}, \char`\"{}cooking\char`\"{}, \char`\"{}travel\char`\"{})
+\begin{DoxyCompactList}\small\item\em A tuple containing the differents interests a user can have. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The user class. 
+
+This class holds all the attributs which make up a user, as well as some useful methods. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classuser_1_1_user_a32d481606c889f82bd4b3387f938e8d9}\label{classuser_1_1_user_a32d481606c889f82bd4b3387f938e8d9}} 
+\index{user.User@{user.User}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!user.User@{user.User}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def user.\+User.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str }]{full\+Name = {\ttfamily \char`\"{}Test~\mbox{\hyperlink{classuser_1_1_user}{User}}\char`\"{}},  }\item[{int }]{age = {\ttfamily 18},  }\item[{int }]{study\+Year = {\ttfamily 2021},  }\item[{str }]{study\+Field = {\ttfamily \char`\"{}Testing\char`\"{}},  }\item[{str }]{residence = {\ttfamily \char`\"{}My~Computer\char`\"{}},  }\item[{set }]{interests = {\ttfamily set(\mbox{[}1,~3,~6\mbox{]})},  }\item[{}]{id = {\ttfamily -\/1},  }\item[{}]{following = {\ttfamily set()},  }\item[{}]{followers = {\ttfamily set()} }\end{DoxyParamCaption})}
+
+
+
+The \mbox{\hyperlink{classuser_1_1_user}{User}} class initializer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em full\+Name} & The user\textquotesingle{}s full name, which automatically be converted to a title string. \\
+\hline
+{\em age} & The user\textquotesingle{}s age. \\
+\hline
+{\em study\+Year} & The user\textquotesingle{}s year of study. \\
+\hline
+{\em study\+Field} & The user\textquotesingle{}s field of study. \\
+\hline
+{\em residence} & The user\textquotesingle{}s residence. \\
+\hline
+{\em interests} & The user\textquotesingle{}s intersts, represented by the indices of interests which can be found in \mbox{\hyperlink{classuser_1_1_user_a9a0bce2cd6558a35a946f4e1b1c66efe}{ALL\+\_\+\+INTERESTS}}. \\
+\hline
+{\em id} & The user\textquotesingle{}s id. {\itshape Used when loading a user from file.} \\
+\hline
+{\em following} & A set of user ids for the users this user is following. {\itshape Used when loading a user from file.} \\
+\hline
+{\em followers} & A set of user ids for the users following this user. {\itshape Used when loading a user from file.}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An instance of the \mbox{\hyperlink{classuser_1_1_user}{User}} class. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classuser_1_1_user_a51697ff1fc93bea3c44b36b7fbdf8174}\label{classuser_1_1_user_a51697ff1fc93bea3c44b36b7fbdf8174}} 
+\index{user.User@{user.User}!\_\_repr\_\_@{\_\_repr\_\_}}
+\index{\_\_repr\_\_@{\_\_repr\_\_}!user.User@{user.User}}
+\doxysubsubsection{\texorpdfstring{\_\_repr\_\_()}{\_\_repr\_\_()}}
+{\footnotesize\ttfamily def user.\+User.\+\_\+\+\_\+repr\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+A simple string representation of the user. 
+
+\begin{DoxyReturn}{Returns}
+The representation of the user. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classuser_1_1_user_ace0a2d6b44e22985f0c4d59db0236281}\label{classuser_1_1_user_ace0a2d6b44e22985f0c4d59db0236281}} 
+\index{user.User@{user.User}!fileStringListToUser@{fileStringListToUser}}
+\index{fileStringListToUser@{fileStringListToUser}!user.User@{user.User}}
+\doxysubsubsection{\texorpdfstring{fileStringListToUser()}{fileStringListToUser()}}
+{\footnotesize\ttfamily def user.\+User.\+file\+String\+List\+To\+User (\begin{DoxyParamCaption}\item[{list}]{lines }\end{DoxyParamCaption})}
+
+
+
+Convert the supplied list of lines (probably obtained from a file) into a new \mbox{\hyperlink{classuser_1_1_user}{User}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lines} & A list of lines containing a user\textquotesingle{}s information. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \mbox{\hyperlink{classuser_1_1_user}{User}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classuser_1_1_user_a311b8450e21b7c683f5dfd30e348b3ba}\label{classuser_1_1_user_a311b8450e21b7c683f5dfd30e348b3ba}} 
+\index{user.User@{user.User}!firstLetter@{firstLetter}}
+\index{firstLetter@{firstLetter}!user.User@{user.User}}
+\doxysubsubsection{\texorpdfstring{firstLetter()}{firstLetter()}}
+{\footnotesize\ttfamily def user.\+User.\+first\+Letter (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+str The first letter of the user\textquotesingle{}s name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classuser_1_1_user_a3918462744da55ecd9aab4f62cd39b51}\label{classuser_1_1_user_a3918462744da55ecd9aab4f62cd39b51}} 
+\index{user.User@{user.User}!follow@{follow}}
+\index{follow@{follow}!user.User@{user.User}}
+\doxysubsubsection{\texorpdfstring{follow()}{follow()}}
+{\footnotesize\ttfamily bool user.\+User.\+follow (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{following\+User }\end{DoxyParamCaption})}
+
+
+
+Add the supplied user\textquotesingle{}s id to the this user\textquotesingle{}s following set, and this user\textquotesingle{}s id to the supplied user\textquotesingle{}s followers set. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em following\+User} & The user to follow. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the user was able to follow the supplied user, False if not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classuser_1_1_user_ae16ab11b7353f51428f35be6cefe8f8b}\label{classuser_1_1_user_ae16ab11b7353f51428f35be6cefe8f8b}} 
+\index{user.User@{user.User}!fullName@{fullName}}
+\index{fullName@{fullName}!user.User@{user.User}}
+\doxysubsubsection{\texorpdfstring{fullName()}{fullName()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def user.\+User.\+full\+Name (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+A getter method for the user\textquotesingle{}s full\+Name. 
+
+This is done to prevent the full\+Name from being directly modified, as this could mess up the dictionary storing the users by the first letter of their name. \begin{DoxyReturn}{Returns}
+The user\textquotesingle{}s full name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classuser_1_1_user_a4303cdb905cfb4c1e37f1fb53762b487}\label{classuser_1_1_user_a4303cdb905cfb4c1e37f1fb53762b487}} 
+\index{user.User@{user.User}!fullName@{fullName}}
+\index{fullName@{fullName}!user.User@{user.User}}
+\doxysubsubsection{\texorpdfstring{fullName()}{fullName()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def user.\+User.\+full\+Name (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{full\+Name }\end{DoxyParamCaption})}
+
+
+
+A setter method for the user\textquotesingle{}s fullname. 
+
+We need to use a setter for the fullname, because if the first letter changes, we need to update the user\textquotesingle{}s position within the database dictionary 
+\begin{DoxyParams}{Parameters}
+{\em full\+Name} & The user\textquotesingle{}s fullname. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classuser_1_1_user_ae697622553d04ee1a57c78a1ded01591}\label{classuser_1_1_user_ae697622553d04ee1a57c78a1ded01591}} 
+\index{user.User@{user.User}!getFollowers@{getFollowers}}
+\index{getFollowers@{getFollowers}!user.User@{user.User}}
+\doxysubsubsection{\texorpdfstring{getFollowers()}{getFollowers()}}
+{\footnotesize\ttfamily def user.\+User.\+get\+Followers (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get a list of users following this user. 
+
+\begin{DoxyReturn}{Returns}
+A list of users. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classuser_1_1_user_a64f2d9348cd6ba95939a40575d0e5292}\label{classuser_1_1_user_a64f2d9348cd6ba95939a40575d0e5292}} 
+\index{user.User@{user.User}!getFollowing@{getFollowing}}
+\index{getFollowing@{getFollowing}!user.User@{user.User}}
+\doxysubsubsection{\texorpdfstring{getFollowing()}{getFollowing()}}
+{\footnotesize\ttfamily def user.\+User.\+get\+Following (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get a list of users that this user if following. 
+
+\begin{DoxyReturn}{Returns}
+A list of users. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classuser_1_1_user_ad82d703c7653ae075f22febb5ea507dc}\label{classuser_1_1_user_ad82d703c7653ae075f22febb5ea507dc}} 
+\index{user.User@{user.User}!toFileString@{toFileString}}
+\index{toFileString@{toFileString}!user.User@{user.User}}
+\doxysubsubsection{\texorpdfstring{toFileString()}{toFileString()}}
+{\footnotesize\ttfamily def user.\+User.\+to\+File\+String (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Convert the \mbox{\hyperlink{classuser_1_1_user}{User}} object into a string which can be written to a file. 
+
+\begin{DoxyReturn}{Returns}
+The \mbox{\hyperlink{classuser_1_1_user}{User}} object as a file string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classuser_1_1_user_a43bc1d4107b7612f4f35b9f3e6232896}\label{classuser_1_1_user_a43bc1d4107b7612f4f35b9f3e6232896}} 
+\index{user.User@{user.User}!unfollow@{unfollow}}
+\index{unfollow@{unfollow}!user.User@{user.User}}
+\doxysubsubsection{\texorpdfstring{unfollow()}{unfollow()}}
+{\footnotesize\ttfamily bool user.\+User.\+unfollow (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{unfollowing\+User }\end{DoxyParamCaption})}
+
+
+
+Does the opposite of \mbox{\hyperlink{classuser_1_1_user_a3918462744da55ecd9aab4f62cd39b51}{follow()}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unfollowing\+User} & The user to unfollow. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the user was able to be unfollow, False if not. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+user.\+py\end{DoxyCompactItemize}
